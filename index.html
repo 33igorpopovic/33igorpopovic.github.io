@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar World | Početna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Guitar World</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Početna</a></li>
+            <li class="nav-item"><a class="nav-link" href="proizvodi.html">Proizvodi</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Dobrodošli u Guitar World</h1>
+        <p>Najbolji izbor gitara za svakog muzičara</p>
+        <a href="proizvodi.html" class="btn btn-dark btn-zoom mt-3">Pogledaj proizvode</a>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Istaknuti proizvodi</h2>
+        <div class="row g-4">
+          <div class="col-md-4 d-flex">
+            <div class="card h-100 w-100">
+              <img src="slike/fender.jpg" class="card-img-top" alt="Fender Stratocaster">
+              <div class="card-body">
+                <h5 class="card-title">Fender Stratocaster</h5>
+                <p class="card-text">Legendarna električna gitara sa vrhunskim tonom.</p>
+                <a href="detalji.html?gitara=Fender%20Stratocaster" class="btn btn-outline-dark btn-zoom">Detalji</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="card h-100 w-100">
+              <img src="slike/ss.png" class="card-img-top" alt="EVH Superstrat">
+              <div class="card-body">
+                <h5 class="card-title">EVH Superstrat</h5>
+                <p class="card-text">Brza, laka i dizajnirana za shreddere.</p>
+                <a href="detalji.html?gitara=EVH%20Superstrat" class="btn btn-outline-dark btn-zoom">Detalji</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex">
+            <div class="card h-100 w-100">
+              <img src="slike/gibson.jpg" class="card-img-top" alt="Gibson Les Paul">
+              <div class="card-body">
+                <h5 class="card-title">Gibson Les Paul</h5>
+                <p class="card-text">Vrhunska gitara sa dubokim zvukom za profesionalce.</p>
+                <a href="detalji.html?gitara=Gibson%20Les%20Paul" class="btn btn-outline-dark btn-zoom">Detalji</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Guitar World. Sva prava zadržana.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

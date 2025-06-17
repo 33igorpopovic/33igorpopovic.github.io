@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalji o gitari</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Guitar World</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="proizvodi.html">Proizvodi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="py-5">
+            <div class="container">
+                <div id="guitar-details" class="text-center">
+                    <h2>Učitavanje podataka...</h2>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Guitar World. Sva prava zadržana.</p>
+            </div>
+        </footer>
+
+        <script>
+            const gitare = {
+            "Fender Stratocaster": {
+                opis: "Legendarna električna gitara poznata po čistom i oštrom tonu.",
+                slika: "slike/fender.jpg"
+            },
+            "Gibson Les Paul": {
+                opis: "Gitara sa bogatim, toplim tonom i ikoničnim dizajnom.",
+                slika: "slike/gibson.jpg"
+            },
+            "Jackson Flying V": {
+                opis: "Ekstreman oblik i sjajan izbor za metal muziku.",
+                slika: "slike/jackson.webp"
+            },
+            "LTD Explorer": {
+                opis: "Moderna gitara sa snažnim zvukom i agresivnim izgledom.",
+                slika: "slike/ltd.webp"
+            },
+            "Ibanez Xiphos": {
+                opis: "Dizajnirana za brzinu i tehničku svirku.",
+                slika: "slike/ibanez.jpg"
+            },
+            "BC Rich Stealth": {
+                opis: "Agresivan dizajn sa snažnim pickup-ovima.",
+                slika: "slike/bcrich.jpg"
+            },
+            "Marilyn Vigier": {
+                opis: "Francuska preciznost i elegancija u jednom instrumentu.",
+                slika: "slike/vigier.jpg"
+            },
+            "EVH Superstrat": {
+                opis: "Napredni dizajn za moderne gitariste i shredder-e.",
+                slika: "slike/ss.png"
+            }
+            };
+
+            const params = new URLSearchParams(window.location.search);
+            const nazivGitare = params.get('gitara');
+
+            const container = document.getElementById('guitar-details');
+
+            if (nazivGitare && gitare[nazivGitare]) {
+            const gitara = gitare[nazivGitare];
+
+            container.innerHTML = `
+                <h2>${nazivGitare}</h2>
+                <img src="${gitara.slika}" alt="${nazivGitare}" class="guitar-img my-4">
+                <p class="lead">${gitara.opis}</p>
+                <a href="proizvodi.html" class="btn btn-dark mt-3">Nazad na proizvode</a>
+            `;
+            } else {
+            container.innerHTML = `
+                <h2>Gitara nije pronađena</h2>
+                <p>Molimo vas da izaberete validnu gitaru sa stranice proizvoda.</p>
+                <a href="proizvodi.html" class="btn btn-dark mt-3">Nazad</a>
+            `;
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
